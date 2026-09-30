@@ -1,0 +1,8 @@
+{
+  "name": "comp-copilot",
+  "version": "0.1.0",
+  "description": "A live CTF/cyber-competition co-pilot: watches the challenge in a Chrome tab and suggests next-step commands in a side pane. Advises, never executes.",
+  "author": {
+    "name": "CyberWVU"
+  }
+}

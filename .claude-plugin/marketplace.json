@@ -1,0 +1,16 @@
+{
+  "name": "cyberwvu",
+  "owner": {
+    "name": "CyberWVU"
+  },
+  "metadata": {
+    "description": "CyberWVU competition tooling"
+  },
+  "plugins": [
+    {
+      "name": "comp-copilot",
+      "source": "./plugins/comp-copilot",
+      "description": "Live CTF/cyber-competition co-pilot that watches the challenge Chrome tab and suggests next-step commands in a side pane."
+    }
+  ]
+}

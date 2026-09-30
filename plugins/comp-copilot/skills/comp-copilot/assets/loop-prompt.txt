@@ -1,0 +1,20 @@
+Paste this into Claude Code to start the co-pilot. Edit the cadence to taste.
+
+------------------------------------------------------------------------------
+/loop 30s Competition co-pilot. Each tick:
+1. Read comp-copilot/mission.md for the objective, scope, flag format, and my preferences.
+2. Read the challenge: if browser, use claude-in-chrome (tabs_context → get_page_text/
+   read_page; screenshot fallback for a canvas terminal); if SSH, run
+   `tmux capture-pane -p -t comp:main.0`.
+3. Read comp-copilot/inbox.md for anything I sent (e.g. from my phone); act on it, then clear it.
+4. Assess where I am vs. the objective. Append to comp-copilot/suggestions.md: a one-line
+   status, then 1-3 concrete next commands, each with a one-line why. Flag risky/out-of-scope
+   moves first. Keep it terse. If nothing changed since last tick, append nothing.
+Do NOT execute anything against the target or type into my shell; only advise.
+------------------------------------------------------------------------------
+
+Phone input: message this session from the Claude app, or append a line to
+comp-copilot/inbox.md from any synced editor.
+
+Cheaper alternative to a 30s loop: skip /loop and just say "check it, what's next?"
+whenever you want eyes on it. Costs nothing while you're heads-down.
