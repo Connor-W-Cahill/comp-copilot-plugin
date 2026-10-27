@@ -11,6 +11,11 @@
       "name": "comp-copilot",
       "source": "./plugins/comp-copilot",
       "description": "Live CTF/cyber-competition co-pilot that watches the challenge Chrome tab and suggests next-step commands in a side pane."
+    },
+    {
+      "name": "comp-copilot-codex",
+      "source": "./plugins/comp-copilot-codex",
+      "description": "Codex edition: watches the challenge over SSH or in Chrome (Codex Chrome plugin) and suggests next moves in a side pane. Runs as a Codex Goal. Advises, never executes."
     }
   ]
 }

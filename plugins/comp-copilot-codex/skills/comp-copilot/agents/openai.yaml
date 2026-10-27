@@ -1,0 +1,10 @@
+interface:
+  display_name: Competition Co-pilot
+  short_description: Live CTF co-pilot — watches the challenge over SSH or in Chrome and suggests next moves. Advises, never executes.
+  brand_color: "#F2A33C"
+  default_prompt: Set up the competition co-pilot in this directory and start watching the challenge.
+
+policy:
+  # The co-pilot is useful on request; let Codex also offer it when a task
+  # clearly matches the description. Flip to false to require explicit $comp-copilot.
+  allow_implicit_invocation: true

@@ -1,0 +1,19 @@
+{
+  "name": "comp-copilot-codex",
+  "version": "0.1.0",
+  "description": "Codex edition of the live CTF/cyber-competition co-pilot: watches the challenge over SSH or in Chrome (via the Codex Chrome plugin) and suggests next-step commands in a side pane. Runs as a Codex Goal. Advises, never executes.",
+  "author": {
+    "name": "CyberWVU"
+  },
+  "repository": "https://github.com/Connor-W-Cahill/comp-copilot-plugin",
+  "keywords": [
+    "ctf",
+    "security",
+    "competition",
+    "codex",
+    "co-pilot"
+  ],
+  "skills": [
+    "./skills/comp-copilot"
+  ]
+}

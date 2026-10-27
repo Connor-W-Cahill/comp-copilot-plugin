@@ -1,0 +1,30 @@
+Codex has no /loop, so the co-pilot runs as a Codex Goal: a standing objective
+Codex keeps working toward on its own until it's complete or the budget runs out.
+
+Start the watch with /goal and this objective (set a token/time budget that
+matches your competition window so it can't run away):
+
+------------------------------------------------------------------------------
+/goal Be my competition co-pilot: keep watching the challenge and keep my
+suggestions board current. Each pass:
+1. Read comp-copilot/mission.md for the objective, scope, flag format, and my preferences.
+2. Read the challenge per mission.md: if SSH, run `tmux capture-pane -p -t comp:main.0`;
+   if a browser app, read the active Chrome tab via the Chrome plugin (node_repl `js`:
+   the page's innerText, or a screenshot for a canvas terminal); if a web terminal I
+   paste, use my latest paste or comp-copilot/inbox.md.
+3. Read comp-copilot/inbox.md for anything I sent (e.g. from my phone); act on it, then clear it.
+4. Assess where I am vs. the objective. Append to comp-copilot/suggestions.md: a one-line
+   status, then 1-3 concrete next commands, each with a one-line why. Flag risky/out-of-scope
+   moves first. Keep it terse. If nothing changed since the last pass, append nothing.
+Do NOT execute anything against the target, drive the Chrome tab against it, or type
+into my shell — reads and suggestions only. Pause the goal if I say so.
+------------------------------------------------------------------------------
+
+Manage it like any goal: pause/resume it, and it auto-stops at complete or when the
+budget is spent. Browser mode needs the challenge's origin granted to the Codex Chrome
+extension first.
+
+On-demand fallback (no goal budget): skip /goal and just send
+"check it, what's next?" whenever you want a single pass. Free while you're heads-down.
+
+Phone input: append a line to comp-copilot/inbox.md from any synced editor.

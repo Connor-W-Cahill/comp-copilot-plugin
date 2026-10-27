@@ -5,23 +5,45 @@ A live co-pilot for CTFs / cyber competitions. It keeps eyes on the challenge
 while you stay hands-on-keyboard. **It advises; it never runs anything against
 the target.**
 
-## Install (teammates)
+This marketplace ships two editions of the same co-pilot:
 
-In Claude Code:
+- **`comp-copilot`** — for **Claude Code**. Watches a Chrome tab via the
+  claude-in-chrome extension or an SSH shell, and runs on a `/loop` timer.
+- **`comp-copilot-codex`** — for **OpenAI Codex CLI**. Watches an SSH shell or a
+  Chrome tab (via the Codex Chrome plugin), and runs as a **Codex Goal** instead
+  of `/loop`.
+
+Pick the one that matches your agent.
+
+## Install — Claude Code
 
 ```
-/plugin marketplace add <this-repo-url>
+/plugin marketplace add Connor-W-Cahill/comp-copilot-plugin
 /plugin install comp-copilot@cyberwvu
 ```
 
 Or from the CLI:
 
 ```
-claude plugin marketplace add <this-repo-url>
+claude plugin marketplace add Connor-W-Cahill/comp-copilot-plugin
 claude plugin install comp-copilot@cyberwvu
 ```
 
 Restart Claude Code if prompted.
+
+## Install — Codex CLI
+
+Codex reads this same marketplace. Add it, then install the Codex edition:
+
+```
+codex plugin marketplace add https://github.com/Connor-W-Cahill/comp-copilot-plugin.git
+codex plugin install comp-copilot-codex@cyberwvu
+```
+
+Restart Codex, then run `/skills` and pick **comp-copilot**, type
+`$comp-copilot`, or just ask to "set up the competition co-pilot." Start the
+watch with `/goal` (the plugin scaffolds a ready-to-paste objective) or ask
+on-demand with "check it, what's next?"
 
 ## Use
 
@@ -38,10 +60,13 @@ suggesting moves. Or just tell Claude: "be my competition co-pilot."
 ## Prerequisites
 
 - **tmux** (`command -v tmux`).
-- **Chrome + the claude-in-chrome extension**, with permission granted for the
-  challenge's site — required to read a browser-based challenge. Install and
-  grant this *before* the event; it can't be automated.
-- Claude Code with the `/loop` skill (built in) if you want continuous watching.
+- To read a **browser** challenge: Chrome plus your agent's extension, with the
+  challenge's site/origin granted — the **claude-in-chrome** extension for the
+  Claude edition, or the **Codex Chrome plugin** (`chrome@openai-bundled`) for
+  the Codex edition. Install and grant access *before* the event; it can't be
+  automated.
+- For continuous watching: Claude's built-in `/loop` (Claude edition) or
+  Codex's `/goal` (Codex edition). Either edition also works on-demand.
 
 ## Rules first
 
